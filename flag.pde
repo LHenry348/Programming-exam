@@ -21,7 +21,7 @@ class Flag
 
   void render()
   {
-    //noStroke();
+    noStroke();
     float c = 0;
     float half = (y*2) + 30;
     float y1 = y - 50;
@@ -42,22 +42,28 @@ class Flag
       }
       */
     }
-    float r = 0;
-    float g = 0;
-    float b = 0;
+    
     float x1 = x + 220;
     float y2 = y1 + 375;
+    
+    float [] r = {0, 0, 200, 40};
+    float [] g = {0, 100, 100, 255};
+    float [] b = {0, 90, 255, 255};
+    int t = 0;
     for(float i = 0; i < 4; i = i + 1)
     {
-      fill(r, g, b);
+      fill(r[t], g[t], b[t]);
       triangle(x, y1 + 50, x1, half, x, y2 + 35);
-      r = r + 40;
-      g = g + 50;
-      b = b + 50;
       x1 = x1 - 30;
       y1 = y1 + 25;
       y2 = y2 - 25;
+      t = t + 1;
     }
+    
+    noFill();
+    stroke(200, 255, 255);
+    strokeWeight(5);
+    circle(x + 50, x1 + 30, 50);
   }
 
   /*
