@@ -10,8 +10,8 @@ class Flag
   {
     this.x = x;
     this.y = y;
-    this.w = 500;
-    this.h = 60;
+    //this.w = 500;
+    //this.h = 60;
   }
   
   void update()
